@@ -1,9 +1,10 @@
-FROM openjdk:latest
+FROM openjdk:16-jdk-slim-buster
 MAINTAINER River Riou
 
 ENV LANG C.UTF-8
+ENV DEBIAN_FRONTEND noninteractive
 RUN ln -snf /usr/share/zoneinfo/Asia/Taipei /etc/localtime && echo Asia/Taipei > /etc/timezone
-RUN apt-get update
+RUN apt-get update  --fix-missing
 
 # curl is needed to download the xampp installer, net-tools provides netstat command for xampp
 RUN apt-get -y install curl net-tools vim wget unzip git
