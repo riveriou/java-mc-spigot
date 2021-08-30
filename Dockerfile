@@ -3,7 +3,7 @@ MAINTAINER River Riou
 
 ENV LANG C.UTF-8
 RUN ln -snf /usr/share/zoneinfo/Asia/Taipei /etc/localtime && echo Asia/Taipei > /etc/timezone
-RUN apt-get update --fix-missing
+RUN apt-get update
 
 # curl is needed to download the xampp installer, net-tools provides netstat command for xampp
 RUN apt-get -y install curl net-tools vim wget unzip git
