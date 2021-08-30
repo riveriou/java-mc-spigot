@@ -12,12 +12,11 @@ RUN apt-get -y install curl net-tools vim wget unzip git
 
 WORKDIR /data
 RUN cd /data
-RUN wget https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar
-RUN java -jar ./BuildTools.jar --rev latest
-RUN mv /data/spigot-*.jar /spigot.jar && rm -r /data/* && mv /spigot.jar /data/
+RUN wget https://launcher.mojang.com/v1/objects/a16d67e5807f57fc4e550299cf20226194497dc2/server.jar
+
 RUN apt-get clean
 RUN echo "set pastetoggle=<F11> " >> ~/.vimrc
 
 RUN echo 'eula=true' >> /data/eula.txt
 EXPOSE  25565
-CMD ["java -Xmx2048M -Xms1024M -jar /data/spigot.jar"]
+CMD ["java -Xmx2048M -Xms1024M -jar /data/server.jar nogui"]
