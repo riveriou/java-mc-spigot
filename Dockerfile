@@ -24,13 +24,6 @@ EXPOSE  25565
 ENV JAVA_MK "java -Xmx2048M -Xms1024M -jar /data/spigot.jar"
 ENV INIT_MK "/bin/bash"
 
-ENV JAVA_BIN "java"
-ENV JAVA_P1 "-Xmx2048M"
-ENV JAVA_P2 "-Xms1024M"
-ENV JAVA_P3 "-jar"
-ENV JAVA_P4 "/data/spigot.jar"
-ENV JAVA_P5 ""
-
 ENV INIT "/bin/bash"
 
-CMD $INIT $JAVA_BIN $JAVA_P1 $JAVA_P2 $JAVA_P3 $JAVA_P4 $JAVA_P5
+CMD /bin/sh -c '$INIT'
