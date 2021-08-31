@@ -21,7 +21,9 @@ RUN echo 'eula=true' >> /data/eula.txt
 
 EXPOSE  25565
 
-ENV INIT_MK "java -Xmx2048M -Xms1024M -jar /data/server.jar"
+ENV JAVA_MK "java -Xmx2048M -Xms1024M -jar /data/server.jar"
+ENV INIT_MK "/bin/bash"
+
 ENV INIT "/bin/bash"
 
 ENTRYPOINT ["/bin/bash","-c"]
