@@ -26,4 +26,4 @@ ENV INIT_MK "/bin/bash"
 
 ENV INIT "/bin/bash"
 
-CMD ['$INIT']
+CMD ["/bin/sh","-c",'$INIT']
