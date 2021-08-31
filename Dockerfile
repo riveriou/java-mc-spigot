@@ -20,4 +20,5 @@ RUN echo "set pastetoggle=<F11> " >> ~/.vimrc
 RUN echo 'eula=true' >> /data/eula.txt
 EXPOSE  25565
 
-CMD ["java","-Xmx2048M","-Xms1024M","-jar","/data/spigot.jar","nogui"]
+ENTRYPOINT ["java","-Xmx2048M","-Xms1024M","-jar","/data/spigot.jar"]
+CMD ["/bin/bash"]
