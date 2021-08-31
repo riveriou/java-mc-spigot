@@ -20,4 +20,8 @@ RUN echo "set pastetoggle=<F11> " >> ~/.vimrc
 
 RUN echo 'eula=true' >> /data/eula.txt
 EXPOSE  25565
-CMD ["java","-Xmx2048M","-Xms1024M","-jar","/data/spigot.jar","nogui"]
+
+ENV INIT_MK "java -Xmx2048M -Xms1024M -jar /data/server.jar"
+ENV INIT "/bin/bash"
+
+CMD /bin/sh -c '$INIT'
