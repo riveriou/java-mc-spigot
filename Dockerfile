@@ -24,4 +24,4 @@ EXPOSE  25565
 ENV INIT_MK "java -Xmx2048M -Xms1024M -jar /data/server.jar"
 ENV INIT "/bin/bash"
 
-CMD /bin/sh -c $INIT
+CMD '$INIT'
