@@ -25,4 +25,4 @@ ENV INIT_MK "java -Xmx2048M -Xms1024M -jar /data/server.jar"
 ENV INIT "/bin/bash"
 
 ENTRYPOINT ["/bin/bash","-c"]
-CMD ["'$INIT'"]
+CMD ["$INIT"]
