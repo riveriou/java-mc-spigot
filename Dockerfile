@@ -1,4 +1,4 @@
-FROM openjdk:16-jdk-slim-buster
+FROM openjdk:19-jdk-slim-buster
 MAINTAINER River Riou
 
 ENV LANG C.UTF-8
