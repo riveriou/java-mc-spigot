@@ -1,4 +1,4 @@
-FROM openjdk:16-jdk-slim-buster
+FROM openjdk:19-jdk-slim-buster
 MAINTAINER River Riou
 
 ENV LANG C.UTF-8
@@ -12,8 +12,7 @@ RUN apt-get -y install curl net-tools vim wget unzip git
 
 WORKDIR /data
 RUN cd /data
-RUN wget https://launcher.mojang.com/v1/objects/a16d67e5807f57fc4e550299cf20226194497dc2/server.jar
-
+RUN wget https://piston-data.mojang.com/v1/objects/c9df48efed58511cdd0213c56b9013a7b5c9ac1f/server.jar
 RUN apt-get clean
 RUN echo "set pastetoggle=<F11> " >> ~/.vimrc
 
