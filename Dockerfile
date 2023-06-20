@@ -13,7 +13,7 @@ RUN apt-get -y install curl net-tools vim wget unzip git
 WORKDIR /data
 RUN cd /data
 RUN wget https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar
-RUN java -jar ./BuildTools.jar --rev latest
+RUN java -jar ./BuildTools.jar --rev 1.20.1
 RUN mv /data/spigot-*.jar /data/spigot.jar
 RUN apt-get clean
 RUN echo "set pastetoggle=<F11> " >> ~/.vimrc
