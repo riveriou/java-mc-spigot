@@ -14,7 +14,7 @@ RUN apt-get clean
 WORKDIR /data
 
 RUN cd /data
-RUN wget https://piston-data.mojang.com/v1/objects/c9df48efed58511cdd0213c56b9013a7b5c9ac1f/server.jar
+RUN wget https://piston-data.mojang.com/v1/objects/84194a2f286ef7c14ed7ce0090dba59902951553/server.jar
 
 RUN echo "set pastetoggle=<F11> " >> ~/.vimrc
 
